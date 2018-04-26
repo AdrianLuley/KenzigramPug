@@ -1,0 +1,23 @@
+html
+  head
+    title= title
+  body
+    h1= "Welcome To Kenzigram!!"
+ 
+    h1="Welcome to ADGram, Please Upload your pictures!!!"
+  div
+    label= "Choose a File"
+    form( 
+        action="http://localhost:3000/upload" 
+        method="post" 
+        enctype="multipart/form-data")
+      input(
+        type='file'
+        name='myFile'
+        id="file"
+      )
+      button= "Upload Picture"
+  div
+      each image in imgs
+          img(src=image)
+          br
